@@ -20,7 +20,7 @@ std::pair<std::optional<Assignment>, SearchStatistics> UniversalSearch::Solve(
     const Formula& formula) const {
   SearchStatistics stats;
 
-  int variable_counter = formula.empty() ? 1 : static_cast<int>(formula.size());
+  int variable_counter = GetVariableCount(formula);
 
   int program_counter = static_cast<int>(programs_.size());
   auto start_time = Clock::now();

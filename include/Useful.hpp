@@ -14,6 +14,18 @@ inline double ElapsedTime(const TimePoint& time_point) {
   return TimeDuration(Clock::now() - time_point).count();
 }
 
+inline int GetVariableCount(const Formula& formula) {
+  int result = 1;
+
+  for (const Clause& clause : formula) {
+    for (const Literal literal : clause) {
+      result = std::max(result, std::abs(literal));
+    }
+  }
+
+  return result;
+}
+
 // Надо будет ещё эти функции дописать, но в 3 часа ночи - не хочу
 //
 // static void PrintStatistics(const SearchStatistics& stats);
