@@ -63,7 +63,7 @@ std::pair<std::optional<Assignment>, SearchStatistics> UniversalSearch::Solve(
       stats.status = Status::NOT_SAT;
 
       if (detailed_output_) {
-        Logger("UNSAT доказан fallback" + std::string(" | раунд=") +
+        Logger("NOT_SAT: доказан fallback" + std::string(" | раунд=") +
                std::to_string(round) +
                " | шагов=" + std::to_string(stats.total_steps) +
                " | время=" + std::to_string(stats.elapsed_seconds) + "s");
