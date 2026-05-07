@@ -81,7 +81,7 @@ std::pair<std::optional<Assignment>, SearchStatistics> UniversalSearch::Solve(
       Logger("SAT | программа=fallback" + std::string(" | раунд=") +
              std::to_string(round) +
              " | шагов=" + std::to_string(stats.total_steps) +
-             " | время=" + std::to_string(stats.elapsed_seconds) + "s");
+             " | время=" + std::to_string(stats.elapsed_seconds) + "s\n");
 
       return {assignment, stats};
     }

@@ -48,10 +48,10 @@ void PrintStatistics(const SearchStatistics& stats) {
   std::cout << "  Результат      : " << stringed_status << "\n"
             << "  Раундов        : " << stats.rounds_completed << "\n"
             << "  Шагов суммарно : " << stats.total_steps << "\n"
-            << "  Время          : " << stats.elapsed_seconds << "s\n";
+            << "  Время          : " << stats.elapsed_seconds << "s";
 
   if (!stats.winner_program.empty()) {
-    std::cout << " Победившая M_i : " << stats.winner_program << " (раунд "
+    std::cout << "Победившая M_i : " << stats.winner_program << " (раунд "
               << stats.winner_round << ")\n";
   }
 }
